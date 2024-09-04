@@ -1,0 +1,216 @@
+import React, { useState } from 'react'
+import location from "../assets/Icon/Location.png"
+import shipping from "../assets/Icon/Shipping.png"
+import payment from "../assets/Icon/Payment.png"
+import phone from "../assets/Phone.png"
+import headphone from "../assets/headphone.png"
+import watch from "../assets/watch.png"
+import card from "../assets/card.png"
+
+function Hero() {
+
+    const [formData, setFormData] = useState({
+        cardNumber: '',
+        cardholderName: '',
+        expDate: '',
+        cvv: '',
+      });
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Form Data:', formData); 
+        setFormData({ cardNumber: '', cardholderName: '', expDate: '', cvv: '' }); // Clear the form
+      };
+  return (
+    <div>
+        <div className='h-[184px] flex items-center justify-start'>
+            <div className='h-full w-full flex justify-between items-center'>
+                <div className='flex justify-center items-center gap-2'>
+                    <div> <img src={location} alt="" /></div>
+                    <div className='flex flex-col'>
+                        <span>Step 1</span>
+                        <span>Address</span>
+                    </div>
+                </div>
+                <div className='flex justify-center items-center gap-2'>
+                    <div> <img src={shipping} alt="" /></div>
+                    <div className='flex flex-col'>
+                        <span>Step 2</span>
+                        <span>Shipping</span>
+                    </div>
+                </div>
+                <div className='flex justify-center items-center gap-2'>
+                    <div> <img src={payment} alt="" /></div>
+                    <div className='flex flex-col'>
+                        <span>Step 3</span>
+                        <span>Payment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='h-[799px] flex gap-24 justify-center'>
+            <div className='w-[512px] h-[704px] border-2 rounded-lg p-6 flex flex-col justify-center'> 
+                <div className=''><span>Summary</span></div>
+                <div className='h-[248px] my-6 flex flex-col gap-4'>
+                    <div className='px-6  h-1/3 bg-gray-400 rounded-xl flex justify-between items-center'>
+                        <div><img src={phone} alt="" /></div>
+                        <div>Apple iPhone 14 Pro Max 128Gb </div>
+                        <div>$1399</div>
+                    </div>
+                    <div className='px-6 h-1/3 bg-gray-400 rounded-xl flex justify-between items-center'>
+                        <div><img src={headphone} alt="" /></div>
+                        <div>AirPods Max Silver</div>
+                        <div>$549</div>
+                    </div>
+                    <div className='px-6 h-1/3 bg-gray-400 rounded-xl flex justify-between items-center'>
+                        <div><img src={watch} alt="" /></div>
+                        <div>Apple Watch Series 9 GPS 41mm </div>
+                        <div>$399</div>
+                    </div>
+                </div>
+                <div className='h-[328px] flex flex-col gap-6'>
+                    <div className='h-1/2 flex flex-col gap-6'>
+                        <div className='flex flex-col gap-4'>
+                            <span>Address</span>
+                            <span>1131 Dusty Townline, Jacksonville, TX 40322</span>
+                        </div>
+                        <div className='flex flex-col gap-3'>
+                            <span>Shipment method</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div className='h-1/2 flex flex-col gap-4'>
+                        <div className='flex justify-between'>
+                            <span>Subtotal</span>
+                            <span>$2347</span>
+                        </div>
+                        <div>
+                            <div className='flex justify-between'>
+                                <span>Estimated Tax</span>
+                                <span>$50</span>
+                            </div>
+                            <div className='flex justify-between'>
+                                <span>Estimated shipping & Handling</span>
+                                <span>$29</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div className='flex justify-between'>
+                                <span>Total</span>
+                                <span>$2426</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='w-[512px] h-[704px] flex flex-col gap-10 justify-between'>
+                <div className='flex flex-col gap-5'>
+                    <span>Payment</span>
+                    <div>
+                        <ul className='flex gap-10'>
+                            <li className='underline'>Credit Card</li>
+                            <li>PayPal</li>
+                            <li>PapPal Credit</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src={card} alt="" />
+                </div>
+                <div>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <div>
+                            <input
+                                type="text"
+                                id="cardholderName"
+                                name="cardholderName"
+                                value={formData.cardholderName}
+                                onChange={handleChange}
+                                placeholder="Cardholder Name"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                        </div>
+
+                        <div>
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                name="cardNumber"
+                                value={formData.cardNumber}
+                                onChange={handleChange}
+                                placeholder="Card Number"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                            />
+                        </div>
+
+                        
+
+                        <div className="flex space-x-4">
+                            <div className="flex-1">
+                                <input
+                                type="text"
+                                id="expDate"
+                                name="expDate"
+                                value={formData.expDate}
+                                onChange={handleChange}
+                                placeholder="Exp.Date"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                                />
+                            </div>
+
+                            <div className="flex-1">
+                                <input
+                                type="text"
+                                id="cvv"
+                                name="cvv"
+                                value={formData.cvv}
+                                onChange={handleChange}
+                                placeholder="CVV"
+                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                required
+                                />
+                            </div>
+                        </div>
+
+                        <div className="py-10 flex items-center">
+                            <input
+                                type="checkbox"
+                                id="sameAsBilling"
+                                name="sameAsBilling"
+                                checked={formData.sameAsBilling}
+                                onChange={handleChange}
+                                className="mr-2"
+                            />
+                            <label htmlFor="sameAsBilling" className="text-gray-700">Same as Billing Address</label>
+                        </div>
+                        <div className='flex gap-2 '>
+                            <button
+                                type="submit"
+                                className="w-full h-16 border-2 border-black py-2 rounded-md hover:bg-black hover:text-white "
+                                >
+                            Back
+                            </button>
+                            <button
+                                type="submit"
+                                className="w-full h-16 bg-black text-white py-2 rounded-md hover:bg-white hover:text-black hover:border-2 border-black"
+                                >
+                            Pay
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Hero
