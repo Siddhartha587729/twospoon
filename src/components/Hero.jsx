@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import location from "../assets/Icon/Location.png"
 import shipping from "../assets/Icon/Shipping.png"
 import payment from "../assets/Icon/Payment.png"
-import phone from "../assets/Phone.png"
+import phone from "../assets/phone.png"
 import headphone from "../assets/headphone.png"
 import watch from "../assets/watch.png"
 import card from "../assets/card.png"
