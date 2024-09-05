@@ -7,10 +7,10 @@ import logow from "../assets/logow.png";
 
 function Footer() {
   return (
-    <div className='bg-black text-white px-6 py-10 md:px-10 lg:px-[160px] lg:py-[104px] flex flex-col gap-8'>
+    <div className='mt-[72px] bg-black text-white px-6 py-10 md:px-10 lg:px-[160px] lg:py-[104px] flex flex-col gap-8'>
       <div className='flex flex-col lg:flex-row justify-between gap-8'>
         <div className='flex flex-col w-full lg:w-[380px] gap-5 items-center md:items-start'>
-          <span className="text-xl font-bold"><img src={logow} alt="" /></span>
+          <span className="text-xl font-bold hover:cursor-pointer hover:scale-105"><img src={logow} alt="" /></span>
           <span className='text-center md:text-left text-[#CFCFCF] font-medium'>We are a residential interior design firm located in Portland. Our boutique-studio offers more than</span>
         </div>
         
@@ -40,10 +40,10 @@ function Footer() {
       </div>
 
       <div className='flex gap-6 justify-center lg:justify-start'>
-        <img src={twitter} alt="Location" className="w-5 h-5" />
-        <img src={facebook} alt="Shipping" className="w-5 h-5" />
-        <img src={tiktok} alt="Payment" className="w-5 h-5" />
-        <img src={instagram} alt="Payment" className="w-5 h-5" />
+        <img src={twitter} alt="Location" className="w-5 h-5 hover:cursor-pointer hover:scale-105" />
+        <img src={facebook} alt="Shipping" className="w-5 h-5 hover:cursor-pointer hover:scale-105" />
+        <img src={tiktok} alt="Payment" className="w-5 h-5 hover:cursor-pointer hover:scale-105" />
+        <img src={instagram} alt="Payment" className="w-5 h-5 hover:cursor-pointer hover:scale-105" />
       </div>
     </div>
   );

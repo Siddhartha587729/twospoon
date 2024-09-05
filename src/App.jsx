@@ -10,7 +10,7 @@ function App() {
       <div>
         <Navbar />
       </div>
-      <div className='px-40'>
+      <div className='px-5 md:px-28 lg:px-40'>
         <Hero />
       </div>
         <Footer />
