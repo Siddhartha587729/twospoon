@@ -6,6 +6,7 @@ import phone from "../assets/phone.png"
 import headphone from "../assets/headphone.png"
 import watch from "../assets/watch.png"
 import card from "../assets/card.png"
+import '../App.css'
 
 function Hero() {
 
@@ -32,77 +33,83 @@ function Hero() {
             <div className='h-full w-full flex justify-between items-center'>
                 <div className='flex justify-center items-center gap-2'>
                     <div> <img src={location} alt="" /></div>
-                    <div className='flex flex-col'>
-                        <span>Step 1</span>
-                        <span>Address</span>
+                    <div className='flex flex-col text-[#B2B2B2]'>
+                        <span className='text-base'>Step 1</span>
+                        <span className='text-2xl -mt-1'>Address</span>
                     </div>
                 </div>
                 <div className='flex justify-center items-center gap-2'>
                     <div> <img src={shipping} alt="" /></div>
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col text-[#B2B2B2]'>
                         <span>Step 2</span>
-                        <span>Shipping</span>
+                        <span className='text-2xl -mt-1'>Shipping</span>
                     </div>
                 </div>
                 <div className='flex justify-center items-center gap-2'>
                     <div> <img src={payment} alt="" /></div>
                     <div className='flex flex-col'>
                         <span>Step 3</span>
-                        <span>Payment</span>
+                        <span className='text-2xl -mt-1'>Payment</span>
                     </div>
                 </div>
             </div>
         </div>
         <div className='h-[799px] flex gap-24 justify-center'>
-            <div className='w-[512px] h-[704px] border-2 rounded-lg p-6 flex flex-col justify-center'> 
-                <div className=''><span>Summary</span></div>
+            <div className='w-[512px] h-[704px] border-2 border-gray-100 rounded-lg p-8 flex flex-col justify-center'> 
+                <div className=''><span className='text-xl font-semibold'>Summary</span></div>
                 <div className='h-[248px] my-6 flex flex-col gap-4'>
-                    <div className='px-6  h-1/3 bg-gray-400 rounded-xl flex justify-between items-center'>
+                    <div className='px-6  h-1/3 bg-[#F6F6F6] rounded-xl flex justify-between items-center gap-4'>
                         <div><img src={phone} alt="" /></div>
-                        <div>Apple iPhone 14 Pro Max 128Gb </div>
-                        <div>$1399</div>
+                        <div className='flex justify-between w-full'>
+                            <span className='font-medium'>Apple iPhone 14 Pro Max 128Gb</span> 
+                            <div className='font-bold'>$1399</div>
+                        </div>
                     </div>
-                    <div className='px-6 h-1/3 bg-gray-400 rounded-xl flex justify-between items-center'>
+                    <div className='px-6 h-1/3 bg-[#F6F6F6] rounded-xl flex justify-between items-center gap-4'>
                         <div><img src={headphone} alt="" /></div>
-                        <div>AirPods Max Silver</div>
-                        <div>$549</div>
+                        <div className='flex justify-between w-full'>
+                            <span className='font-medium'>AirPods Max Silver</span>
+                            <div className='font-bold'>$549</div>
+                        </div> 
                     </div>
-                    <div className='px-6 h-1/3 bg-gray-400 rounded-xl flex justify-between items-center'>
+                    <div className='px-6 h-1/3 bg-[#F6F6F6] rounded-xl flex justify-between items-center gap-4'>
                         <div><img src={watch} alt="" /></div>
-                        <div>Apple Watch Series 9 GPS 41mm </div>
-                        <div>$399</div>
+                        <div className='flex justify-between w-full'>
+                            <span className='font-medium'>Apple Watch Series 9 GPS 41mm</span> 
+                            <div className='font-bold'>$399</div>
+                        </div>
                     </div>
                 </div>
                 <div className='h-[328px] flex flex-col gap-6'>
-                    <div className='h-1/2 flex flex-col gap-6'>
+                    <div className='h-[136px] flex flex-col gap-6'>
                         <div className='flex flex-col gap-4'>
-                            <span>Address</span>
-                            <span>1131 Dusty Townline, Jacksonville, TX 40322</span>
+                            <span className='text-sm text-[#545454] font-medium'>Address</span>
+                            <span className='font-medium'>1131 Dusty Townline, Jacksonville, TX 40322</span>
                         </div>
-                        <div className='flex flex-col gap-3'>
-                            <span>Shipment method</span>
-                            <span>Free</span>
+                        <div className='flex flex-col gap-2'>
+                            <span className='text-sm text-[#545454] font-medium'>Shipment method</span>
+                            <span className='font-medium'>Free</span>
                         </div>
                     </div>
-                    <div className='h-1/2 flex flex-col gap-4'>
-                        <div className='flex justify-between'>
+                    <div className='h-[168px] flex flex-col gap-6'>
+                        <div className='flex justify-between font-medium'>
                             <span>Subtotal</span>
                             <span>$2347</span>
                         </div>
-                        <div>
+                        <div className='flex flex-col gap-3'>
                             <div className='flex justify-between'>
                                 <span>Estimated Tax</span>
-                                <span>$50</span>
+                                <span className='font-medium'>$50</span>
                             </div>
                             <div className='flex justify-between'>
                                 <span>Estimated shipping & Handling</span>
-                                <span>$29</span>
+                                <span className='font-medium'>$29</span>
                             </div>
                         </div>
                         <div>
                             <div className='flex justify-between'>
-                                <span>Total</span>
-                                <span>$2426</span>
+                                <span className='font-medium'>Total</span>
+                                <span className='font-bold'>$2426</span>
                             </div>
                         </div>
                     </div>
@@ -110,12 +117,12 @@ function Hero() {
             </div>
             <div className='w-[512px] h-[704px] flex flex-col gap-10 justify-between'>
                 <div className='flex flex-col gap-5'>
-                    <span>Payment</span>
+                    <span className='font-bold text-xl'>Payment</span>
                     <div>
-                        <ul className='flex gap-10'>
-                            <li className='underline'>Credit Card</li>
-                            <li>PayPal</li>
-                            <li>PapPal Credit</li>
+                        <ul className='flex gap-10 text-sm font-medium'>
+                            <li className='underline underline-offset-8 '><span className=''>Credit Card</span></li>
+                            <li className='text-gray-400'>PayPal</li>
+                            <li className='text-gray-400'>PapPal Credit</li>
                         </ul>
                     </div>
                 </div>
@@ -187,11 +194,13 @@ function Hero() {
                                 name="sameAsBilling"
                                 checked={formData.sameAsBilling}
                                 onChange={handleChange}
-                                className="mr-2"
+                                className="mr-2 h-5 w-5 border-black rounded focus:ring-0 checked:bg-black checked:border-black" 
                             />
-                            <label htmlFor="sameAsBilling" className="text-gray-700">Same as Billing Address</label>
+                            <label htmlFor="sameAsBilling" className="font-medium text-[15px]">
+                                Same as Billing Address
+                            </label>
                         </div>
-                        <div className='flex gap-2 '>
+                        <div className='flex gap-2 font-medium'>
                             <button
                                 type="submit"
                                 className="w-full h-16 border-2 border-black py-2 rounded-md hover:bg-black hover:text-white "
